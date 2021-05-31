@@ -16,8 +16,9 @@ app.set('view engine', 'ejs')
 // res.render(view, locals)
 
 
-MongoClient.connect("mongodb+srv://"+process.env.MONGOUN+":"+ process.env.MONGOPW + ".HIRT@huecluster0.i6cxh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
-    useUnifiedTopology: true
+MongoClient.connect("mongodb+srv://"+process.env.MONGOUN+":"+ process.env.MONGOPW + ".HIRT@huecluster0.i6cxh.mongodb.net/HueData?retryWrites=true&w=majority", {
+    useUnifiedTopology: true,
+    useNewUrlParser: true
   })
   .then(client => {
     console.log('Connected to Mongo Database')
@@ -37,6 +38,4 @@ MongoClient.connect("mongodb+srv://"+process.env.MONGOUN+":"+ process.env.MONGOP
   })
   .catch(error => console.error(error))
 
-app.listen(port, function() {
-  console.log('Server is listening...')
-})
+  app.listen(port, () => console.log(`Listening on port ${port}`));
