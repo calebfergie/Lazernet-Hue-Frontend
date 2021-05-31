@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 // dotenv baby
 const dotenv = require("dotenv");
 dotenv.config();
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -36,6 +37,6 @@ MongoClient.connect("mongodb+srv://"+process.env.MONGOUN+":"+ process.env.MONGOP
   })
   .catch(error => console.error(error))
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen(port, function() {
   console.log('Server is listening...')
 })
