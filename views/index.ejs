@@ -1,0 +1,31 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lazernet Worldwide</title>
+  </head>
+  <body>
+    <h1>Welcome to Lazernet</h1>
+    <h3><i>a portal into calebfergie's smart home</h3>
+    <br>
+    <h2> Temperature </h2>
+<ul class="temperature">
+  <h3>Most Recent Reading:</h3>
+  <span><%= HueDataSensor1[HueDataSensor1.length-1].lastupdated %></span>:
+  <!-- Output quote from the iterated quote object -->
+  <span><%= HueDataSensor1[HueDataSensor1.length-1].TempF %></span>
+  <!-- Loop through quotes -->
+  <% for(var i = 0; i < HueDataSensor1.length; i++) {%>
+  <h3>Temperature Timeline:</h3>
+    <li class="temperature">
+      <!-- Output name from the iterated quote object -->
+      <span><%= HueDataSensor1[i].lastupdated %></span>:
+      <!-- Output quote from the iterated quote object -->
+      <span><%= HueDataSensor1[i].TempF %></span>
+    </li>
+  <% } %>
+</ul>
+    <!-- <%= HueDataSensor1 %> -->
+  </body>
+</html>
