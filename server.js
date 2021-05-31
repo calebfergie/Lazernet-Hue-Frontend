@@ -16,26 +16,34 @@ app.set('view engine', 'ejs')
 // res.render(view, locals)
 
 
-MongoClient.connect("mongodb+srv://"+process.env.MONGOUN+":"+ process.env.MONGOPW + ".HIRT@huecluster0.i6cxh.mongodb.net/HueData?retryWrites=true&w=majority", {
-    useUnifiedTopology: true,
-    useNewUrlParser: true
-  })
-  .then(client => {
-    console.log('Connected to Mongo Database')
-    const db = client.db('HueData')
-    const HueDataSensor1 = db.collection('HueDataSensor1')
-    app.get('/', (req, res) => {
-      db.collection('HueDataSensor1').find().toArray()
-        .then(results => {
-          res.render('index.ejs', {
-            HueDataSensor1: results
-          })
-        })
-        .catch( /* ... */ )
+// MongoClient.connect("mongodb+srv://"+process.env.MONGOUN+":"+ process.env.MONGOPW + ".HIRT@huecluster0.i6cxh.mongodb.net/HueData?retryWrites=true&w=majority", {
+//     useUnifiedTopology: true,
+//     useNewUrlParser: true
+//   })
+//   .then(client => {
+//     console.log('Connected to Mongo Database')
+//     const db = client.db('HueData')
+//     const HueDataSensor1 = db.collection('HueDataSensor1')
+//     app.get('/', (req, res) => {
+//       db.collection('HueDataSensor1').find().toArray()
+//         .then(results => {
+//           res.render('index.ejs', {
+//             HueDataSensor1: results
+//           })
+//         })
+//         .catch( /* ... */ )
+//
+//     })
+//
+//   })
+//   .catch(error => console.error(error))
 
-    })
 
-  })
-  .catch(error => console.error(error))
+app.get('/', (req, res) => {
+  // db.collection('quotes').find().toArray()
+  //   .then(/* ... */)
+  //   .catch(/* ... */)
+  res.render('index.ejs', {})
+})
 
   app.listen(port, () => console.log(`Listening on port ${port}`));
