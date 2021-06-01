@@ -2,17 +2,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Lazernet Worldwide</title>
+    <%- include('./partials/head'); %>
   </head>
-  <body>
-    <h1>Welcome to Lazernet</h1>
-    <h3><i>a portal into calebfergie's smart home</h3>
-    <br>
+  <body class="container">
+
+    <header>
+    <%- include('./partials/header'); %>
+  </header>
+    <main>
+      <div class="jumbotron">
+        <h1>Welcome to Lazernet</h1>
+        <h3><i>a portal into calebfergie's smart home</h3>
+</div>
     <h2> Temperature </h2>
     <h3>Most Recent Reading:</h3>
   <span><%= HueDataSensor1[HueDataSensor1.length-1].lastupdated %></span>:
   <!-- Output quote from the iterated quote object -->
   <span><%= HueDataSensor1[HueDataSensor1.length-1].TempF %></span>
+</main>
+<footer>
+  <%- include('./partials/footer'); %>
+</footer>
   </body>
 </html>
