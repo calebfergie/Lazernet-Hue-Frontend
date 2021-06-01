@@ -1,11 +1,13 @@
 {
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongodb": "^3.6.9",
     "node-hue-api": "^5.0.0-beta.2",
-    "dotenv": "^10.0.0"
+    "path": "^0.12.7",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
