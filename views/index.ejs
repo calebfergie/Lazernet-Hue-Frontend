@@ -1,27 +1,35 @@
 <!-- index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('./partials/head'); %>
-  </head>
-  <body class="container">
 
-    <header>
+<head>
+  <%- include('./partials/head'); %>
+</head>
+
+<body class="container">
+
+  <header>
     <%- include('./partials/header'); %>
   </header>
-    <main>
-      <div class="jumbotron">
+  <main>
+    <!-- <nav class="navbar navbar-inverse navbar-fixed-top"> -->
+    <%- include('./partials/dashboard'); %>
+
+    <!-- <div class="jumbotron">
         <h1>Welcome to Lazernet</h1>
         <h3><i>a portal into calebfergie's smart home</h3>
 </div>
     <h2> Temperature </h2>
-    <h3>Most Recent Reading:</h3>
-  <span><%= HueDataSensor1[HueDataSensor1.length-1].lastupdated %></span>:
-  <!-- Output quote from the iterated quote object -->
-  <span><%= HueDataSensor1[HueDataSensor1.length-1].TempF %></span>
-</main>
-<footer>
-  <%- include('./partials/footer'); %>
-</footer>
-  </body>
+    <h3>Most Recent Reading:</h3> -->
+
+    <!-- <span><%= HueDataSensor1[HueDataSensor1.length-1].lastupdated %></span>: -->
+    <!-- Output quote from the iterated quote object -->
+    <!-- <span><%= HueDataSensor1[HueDataSensor1.length-1].TempF %></span> -->
+
+  </main>
+  <footer>
+    <%- include('./partials/footer'); %>
+  </footer>
+</body>
+
 </html>

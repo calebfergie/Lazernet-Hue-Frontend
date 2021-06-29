@@ -17,7 +17,7 @@ app.set('view engine', 'ejs')
 // res.render(view, locals)
 
 
-MongoClient.connect("mongodb+srv://"+process.env.MONGOUN+":"+ process.env.MONGOPW + ".HIRT@huecluster0.i6cxh.mongodb.net/HueData?retryWrites=true&w=majority", {
+MongoClient.connect("mongodb+srv://"+process.env.MONGOUN+":"+ process.env.MONGOPW + "@huecluster0.i6cxh.mongodb.net/HueData?retryWrites=true&w=majority", {
     useUnifiedTopology: true,
     useNewUrlParser: true
   })
